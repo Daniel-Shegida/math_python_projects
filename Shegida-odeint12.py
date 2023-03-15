@@ -11,7 +11,7 @@ import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
-L = open("ode-test1.txt", "w")
+L = open("shegida-odeint34.txt", "w")
 
 
 def show_analitic_numerical_compare(starting_x, ending_x, analitic_fun, numerical_x, numerical_y, index):
@@ -61,23 +61,3 @@ print("y=", y2, file=L)
 show_analitic_numerical_compare(a, b, np.sin, t, y1, 1)
 show_analitic_numerical_compare(a, b, np.cos, t, y2, 2)
 
-# plt.plot(t, y2, '-r',linewidth=3)
-# plt.savefig("ode-test1-a.pdf", dpi=300)
-# plt.show()
-# plt.close()
-
-# ###############################
-# tau = list(t)
-# print("type(tau)=", type(tau))
-# print("type(tau)=", type(tau), file=L)
-# Y0 = 0.01
-# Y = odeint(dydt, Y0, tau)
-# print("Y=", Y)
-# print("Y=", Y, file=L)
-# Y = Y.flatten()
-# print("Y=", Y)
-# print("Y=", Y, file=L)
-# plt.plot(tau, Y,'-b',linewidth=3)
-# plt.savefig("ode-test1-b.pdf", dpi=300)
-# plt.show()
-# plt.close()
