@@ -15,6 +15,12 @@ def Frv(V):
  # in the opposite direction of velocity
     return -(A*V + B*V**3)/V
 
+def analitic(m, v0y, g):
+    t_analitic = 2 * v0y / g
+    h_analitic = (m * v0y * v0y / 2) / (m * g)
+    print(f" t аналитическое = {t_analitic}" )
+    print(f" h аналитическое = {h_analitic}" )
+
 
 def system(f, t):
  global m, g, A, B
@@ -126,6 +132,8 @@ xx = x[:numnode]
 zz = z[:numnode]
 print("len(xx)=", len(xx))
 
+analitic(m, Vz0, g)
+
 plt.plot(xx, zz, 'orangered', linewidth=5)
 plt.axis([0, x_max+50, 0., z_max+50])
 plt.grid(True)
@@ -234,6 +242,8 @@ plt.close()
 xx = x[:numnode]
 zz = z[:numnode]
 print("len(xx)=", len(xx))
+analitic(m, Vz0, g)
+
 
 plt.plot(xx, zz, 'orangered', linewidth=5)
 plt.axis([0, x_max+50, 0., z_max+50])
