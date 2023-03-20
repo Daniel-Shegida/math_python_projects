@@ -20,7 +20,7 @@ class DoubleWrite:
         self.file1.flush()
         self.file2.flush()
 
-logfile = open('numpy.txt', 'w')
+logfile = open('../numpy.txt', 'w')
 sys.stdout = DoubleWrite(sys.stdout, logfile)
 print(label)
 

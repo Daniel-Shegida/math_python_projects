@@ -15,8 +15,8 @@ x = [x/10 for x in range(1,11)]
 y_1 = [math.sin(y) for y in x]
 ax_1.set_title('ax_1')
 ax_1.plot(x,y_1, "red")
-ax_1.scatter(x,y_1)
-ax_1.scatter(x, y_1)
+# ax_1.scatter(x,y_1)
+# ax_1.scatter(x, y_1)
 ax_1.set_xlabel('ось абцис (XAxis)')
 ax_1.set_ylabel('ось ординат (sin(x))')
 y_2 = [- math.sin(y) for y in x]
