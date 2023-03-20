@@ -9,7 +9,7 @@ from scipy.integrate import odeint
 Группа ктмфо
 x'' + x^3 = sin(t), x(0) = x'(0) = 0
 '''
-L = open("shegida-odeint12.txt", "w")
+L = open("../shegida-odeint12.txt", "w")
 def f(y, t):
  y1, y2 = y # вводим имена искомых функций
  return [y2,-y1**3+np.sin(t)]
