@@ -1,7 +1,6 @@
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
-from scipy import optimize
 from scipy import interpolate
 
 al = 0  # Угол, градусы
@@ -75,16 +74,16 @@ def calculate(color, label):
     return t[-1], z_max, Vz_t0, x_max, x_h_max
 
 
-t2_1, h2_1, t1_1, x3_1_max, x3_1_hmax = calculate('r', 'Без всего')
+t2_1, h2_1, t1_1, x3_1_max, x3_1_hmax = calculate('r', ' траектория в вакууме')
 print(h2_1)
 
 A = 10 ** -5  # Параметр внешней среды, N * s/m
 B = 10 ** -8  # Параметр внешней среды, N * s^3/m^3
 
-t2_2, h2_2, t1_2, x3_2_max, x3_2_hmax = calculate('b', 'С A и B')
+t2_2, h2_2, t1_2, x3_2_max, x3_2_hmax = calculate('b', 'траектория в среде')
 
 Fside = 0.15  # Сила, кг*м/с^2
-t2_3, h2_3, t1_3, x3_3_max, x3_3_hmax = calculate('g', 'С силой, с А и с B')
+t2_3, h2_3, t1_3, x3_3_max, x3_3_hmax = calculate('g', 'траектория в среде и с силой')
 
 
 ax1.legend(loc="upper center", fontsize=15)

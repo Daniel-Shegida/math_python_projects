@@ -11,7 +11,7 @@ import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
-L = open("../shegida-odeint34.txt", "w")
+L = open("../../shegida-odeint34.txt", "w")
 
 
 def show_analitic_numerical_compare(starting_x, ending_x, analitic_fun, numerical_x, numerical_y, index):
